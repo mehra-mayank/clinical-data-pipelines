@@ -78,4 +78,4 @@ Check monitoring dashboard for pipeline objects
 1. With hash partitions\_assay\_parameters
 1. Without hash partitions\_compound\_structural\_alerts
 1. With hash partitions\_compound\_structural\_alerts
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**
+
