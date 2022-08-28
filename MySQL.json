@@ -1,0 +1,24 @@
+{
+  "data" : [
+    {
+      "credential_type" : "Username with password",
+      "credential_name" : "All Sources",
+      "dataplace_name" : "MySQL Crawling",
+      "is_active" : true,
+      "is_sensitive" : false,
+      "connection_type" : "mysql",
+      "description" : "",
+      "source_info" : {
+        "database_name" : "nabu",
+        "filters_enabled" : false,
+        "host_name" : "w3.devsql.modak.com:3306"
+      }
+    }
+  ],
+  "dataplace_tag_details" : [
+    {
+      "tag_category_name" : "Tenant",
+      "tag_value" : "GPS"
+    }
+  ]
+}
