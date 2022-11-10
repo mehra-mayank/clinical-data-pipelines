@@ -1,89 +1,2048 @@
 {
-  "data_movement_tag_details" : [],
-  "data" : [
+  "CurationPipeline" : [
     {
-      "data_movement_name" : "Postgres_to_postgres_bms_demo",
-      "description" : "",
-      "destination_dataplace_name" : "Postgres CTGOV source",
-      "destination_schema_name" : "ctgov",
-      "ingestion_connection_type" : null,
-      "ingestion_table_format" : {
-        "database_name" : false,
-        "prefix" : false,
-        "prefix_value" : "",
-        "schema_name" : false
-      },
-      "workflow_engine_name" : "ingestion_workflow_engine",
-      "compute_engine_name" : "CDE_3_2_test_ce",
-      "compute_engine_details" : {
-        "compute_engine_name" : "CDE_3_2_test_ce",
-        "engine_type" : "Spark",
-        "engine_sub_type" : "CDE-Almaren"
-      },
-      "source_type" : "postgres",
-      "destination_type" : "postgres",
-      "bot_priority" : "Default",
-      "advance_table_options" : null,
-      "flow_details" : {
-        "pipeline_retry" : false,
-        "ignore_data_types" : [],
-        "schema_drift" : {
-          "email_ids" : [],
-          "advanced_options_sub_type" : "drop_create_table",
-          "config" : {
-            "suffix" : "",
-            "timestamp" : ""
-          },
-          "enabled" : false
+      "pipelineJson" : {
+        "pipeline_version" : "v0.902",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : false,
+        "is_active" : true,
+        "nodeKeyProperty" : "nodeId",
+        "refresh_freq" : {
+          "consider_timezone" : false,
+          "cron_freq" : "0 27 09 13 9 ? 2022",
+          "cron_timezone" : "Asia/Calcutta",
+          "cron_type" : "one_time"
         },
-        "skip_verification" : true,
-        "ignore_null_tables" : false,
-        "pre_conditions" : {
-          "pipeline_timeout" : 8,
-          "enabled" : false
-        },
-        "post_conditions" : {
-          "rest_api_details" : [],
-          "enabled" : false
-        },
-        "parallel_source_connections" : 3,
-        "destination_file_format" : "default",
-        "verification_threshold" : "",
-        "retry_count" : 3,
-        "pipeline_flow_timeout" : 20,
-        "pipeline_details" : null,
-        "unsupported_data_types" : [
+        "linkToKeyProperty" : "toNodeId",
+        "source_records" : null,
+        "preview_records" : null,
+        "linkDataArray" : [
           {
-            "asis" : [],
-            "null" : [],
-            "ignore" : [],
-            "customtext" : []
+            "endPortId" : 166210331644909,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "description",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166210185636604,
+            "toNodeId" : 166210331644908,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166210185636502,
+            "link_id" : 166210331818211
+          },
+          {
+            "endPortId" : 166210186288207,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_description",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_description",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166210331644910,
+            "toNodeId" : 166210186285705,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166210331644908,
+            "link_id" : 166210332212113
+          },
+          {
+            "endPortId" : 166210359246520,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "description",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166210351302116,
+            "toNodeId" : 166210359246519,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166210351302014,
+            "link_id" : 166210360466725
+          },
+          {
+            "endPortId" : 166210359832723,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "description",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166210351302117,
+            "toNodeId" : 166210359832722,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166210351302014,
+            "link_id" : 166210360723226
+          },
+          {
+            "endPortId" : 166210361613229,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "id1",
+                    "type" : "integer"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166210359246521,
+            "toNodeId" : 166210361613227,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166210359246519,
+            "link_id" : 166210392167133
+          },
+          {
+            "endPortId" : 166210361945732,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "nct_id",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166210359832724,
+            "toNodeId" : 166210361945730,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166210359832722,
+            "link_id" : 166210392365634
+          },
+          {
+            "endPortId" : 166210331644909,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "description",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166306055922304,
+            "toNodeId" : 166210331644908,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166306055922202,
+            "link_id" : 166306057213205
+          },
+          {
+            "endPortId" : 166210351302015,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "nct_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "group_type",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "title",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "description",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166306055922304,
+            "toNodeId" : 166210351302014,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166306055922202,
+            "link_id" : 166306057372706
           }
-        ]
-      },
-      "next_schedule_date" : null
-    }
-  ],
-  "data_movement_details" : [
-    {
-      "dataplace_name" : "Postgres CTGOV source",
-      "schema_name" : "ctgov",
-      "total_count" : 1,
-      "ingest_all_tables_views" : [
-        "T",
-        "V",
-        "M"
-      ],
-      "filters_list" : [
-        {
-          "filter_name" : "static",
-          "filter_value" : [
-            "active_storage_attachments"
-          ],
-          "filter_type" : "Static",
-          "priority_order" : 2
-        }
-      ]
+        ],
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 1,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "JDBC Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "jdbc.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 1,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {
+              "default_placeholder_value" : "0001-01-01",
+              "default_enable_hash_partition" : false,
+              "default_fetch_size" : 5000,
+              "default_query_timeout" : 0,
+              "default_number_of_hash_partitions" : 8
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "jdbc_source",
+            "outputLinks" : [
+              166210331818211
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 144,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "JDBC Source 1",
+              "queryTimeout" : 0,
+              "sql_query_error_msg" : "",
+              "credential_name" : "All Sources Creds",
+              "connection_type" : "postgres",
+              "incremental_load" : [],
+              "description" : "",
+              "enable_hash_partition" : false,
+              "connection_type_id" : 1,
+              "credential_type_id" : 1,
+              "jdbc_url" : "jdbc:postgresql://w3.devpsql.modak.com:5432/source_db",
+              "tags" : [],
+              "credential_type" : "Username with password",
+              "driver" : "org.postgresql.Driver",
+              "jdbc_read_options" : [],
+              "fetchsize" : 5000,
+              "sql_query" : "select * from ctgov.design_groups",
+              "credential_id" : 71,
+              "number_of_hash_partitions" : 8
+            },
+            "nodeId" : 166210185636502,
+            "nodeLabel" : "JDBC",
+            "nodeUiConfig" : {
+              "yPos" : -40,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 166210185636603,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "nct_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "group_type",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "title",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "description",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166210185636604,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -450
+            },
+            "configTypeName" : "jdbc config form template"
+          },
+          {
+            "uiNodeOrder" : "2A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 7,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "JDBC Destination",
+              "initialXPos" : 100,
+              "group_label" : "T",
+              "nodeGroupType" : "destination",
+              "icon" : "jdbc.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 7,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_batchsize" : 1000,
+              "default_query_timeout" : 0,
+              "default_mode" : "overwrite",
+              "default_truncate" : false
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "jdbc_destination",
+            "outputLinks" : [],
+            "is_node_validated" : true,
+            "configTypeId" : 194,
+            "inputLinks" : [
+              166210332212113
+            ],
+            "config" : {
+              "nodeName" : "JDBC Destination 1",
+              "queryTimeout" : 0,
+              "credential_name" : "All Sources Creds",
+              "connection_type" : "ms_sql_server",
+              "description" : "",
+              "connection_type_id" : 38,
+              "schema_name" : "",
+              "credential_type_id" : 1,
+              "jdbc_url" : "jdbc:sqlserver://w3.devsql.modak.com",
+              "batchsize" : 1000,
+              "tags" : [],
+              "mode" : "overwrite",
+              "credential_type" : "Username with password",
+              "driver" : "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+              "truncate" : false,
+              "jdbc_write_options" : [],
+              "full_table_name" : "test.sales.multiprocessors",
+              "credential_id" : 71
+            },
+            "nodeId" : 166210186285705,
+            "nodeLabel" : "JDBC",
+            "nodeUiConfig" : {
+              "yPos" : -50,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 166210186288206,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 166210186288207,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 20
+            },
+            "configTypeName" : "vue template jdbc destination config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "3A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 14,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 5,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 2,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 2,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "Join",
+              "initialXPos" : 100,
+              "group_label" : "P",
+              "nodeGroupType" : "processor",
+              "icon" : "join.svg",
+              "groupLabel" : "Processors",
+              "node_properties_id" : 14,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 4
+            },
+            "node_form_default_values" : {},
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "join",
+            "outputLinks" : [
+              166210332212113
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 197,
+            "inputLinks" : [
+              166210331818211,
+              166306057213205
+            ],
+            "config" : {
+              "nodeName" : "Join 1",
+              "output_fields" : [
+                {
+                  "output_name" : "a_id",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "a.id",
+                  "output_field_type" : "integer"
+                },
+                {
+                  "output_name" : "a_nct_id",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "a.nct_id",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "a_group_type",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "a.group_type",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "a_title",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "a.title",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "a_description",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "a.description",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "b_id",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "b.id",
+                  "output_field_type" : "integer"
+                },
+                {
+                  "output_name" : "b_nct_id",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "b.nct_id",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "b_group_type",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "b.group_type",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "b_title",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "b.title",
+                  "output_field_type" : "string"
+                },
+                {
+                  "output_name" : "b_description",
+                  "include" : true,
+                  "error_msg" : "",
+                  "column_name" : "b.description",
+                  "output_field_type" : "string"
+                }
+              ],
+              "join_type" : "Full Outer Join",
+              "where_clause" : "",
+              "join_condition" : "a.nct_id=b.nct_id",
+              "where_clause_error_msg" : "",
+              "join_condition_error_msg" : "",
+              "description" : "",
+              "view_names" : [
+                {
+                  "default_name" : "JDBC Source 1",
+                  "error_msg" : "",
+                  "alias_name" : "a",
+                  "link_id" : 166210331818211
+                },
+                {
+                  "default_name" : "JDBC Source 1_copy 1",
+                  "error_msg" : "",
+                  "alias_name" : "b",
+                  "link_id" : 166306057213205
+                }
+              ],
+              "tags" : []
+            },
+            "nodeId" : 166210331644908,
+            "nodeLabel" : "Join",
+            "nodeUiConfig" : {
+              "yPos" : 10,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 5,
+                  "port_id" : 166210331644909,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_nct_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_group_type",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_title",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_description",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_nct_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_group_type",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_title",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_description",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166210331644910,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -230
+            },
+            "configTypeName" : "vue template join processor config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "3C",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 16,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 8,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 9,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white_number",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 3,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 1
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "Split",
+              "initialXPos" : 100,
+              "group_label" : "P",
+              "nodeGroupType" : "processor",
+              "icon" : "split.svg",
+              "groupLabel" : "Processors",
+              "node_properties_id" : 16,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 4
+            },
+            "node_form_default_values" : {},
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "split",
+            "outputLinks" : [
+              166210360466725,
+              166210360723226
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 215,
+            "inputLinks" : [
+              166306057372706
+            ],
+            "config" : {
+              "nodeName" : "Split 1",
+              "description" : "",
+              "default_value" : {
+                "where_clause" : "default",
+                "port_id" : 166210351302117,
+                "condition_id" : 2
+              },
+              "tags" : [],
+              "where_clauses" : [
+                {
+                  "where_clause" : "id>554117",
+                  "error_msg" : "",
+                  "port_id" : 166210351302116,
+                  "condition_id" : 1
+                }
+              ]
+            },
+            "nodeId" : 166210351302014,
+            "nodeLabel" : "Split",
+            "nodeUiConfig" : {
+              "yPos" : 150,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 8,
+                  "port_id" : 166210351302015,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "nct_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "group_type",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "title",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "description",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 9,
+                  "port_id" : 166210351302116,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "nct_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "group_type",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "title",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "description",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 9,
+                  "port_id" : 166210351302117,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -230
+            },
+            "configTypeName" : "vue template split processor config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "3D",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 17,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 8,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "Transform",
+              "initialXPos" : 100,
+              "group_label" : "P",
+              "nodeGroupType" : "processor",
+              "icon" : "transform.svg",
+              "groupLabel" : "Processors",
+              "node_properties_id" : 17,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 4
+            },
+            "node_form_default_values" : {},
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "transform",
+            "outputLinks" : [
+              166210392167133
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 193,
+            "inputLinks" : [
+              166210360466725
+            ],
+            "config" : {
+              "nodeName" : "Transform 1",
+              "where_clause" : "",
+              "where_clause_flag" : false,
+              "where_clause_error_msg" : "",
+              "description" : "",
+              "transform_fields" : [
+                {
+                  "error_msg" : "",
+                  "input_field" : "cast(id as int)",
+                  "output_field_name" : "id1",
+                  "output_field_type" : "integer"
+                }
+              ],
+              "tags" : []
+            },
+            "nodeId" : 166210359246519,
+            "nodeLabel" : "Transform",
+            "nodeUiConfig" : {
+              "yPos" : 80,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 8,
+                  "port_id" : 166210359246520,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "id1",
+                          "type" : "integer"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166210359246521,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : 20
+            },
+            "configTypeName" : "vue template transform processor config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "3F",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 19,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 7,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "Spark SQL",
+              "initialXPos" : 100,
+              "group_label" : "P",
+              "nodeGroupType" : "processor",
+              "icon" : "spark_sql.svg",
+              "groupLabel" : "Processors",
+              "node_properties_id" : 19,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 4
+            },
+            "node_form_default_values" : {},
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "spark_sql",
+            "outputLinks" : [
+              166210392365634
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 199,
+            "inputLinks" : [
+              166210360723226
+            ],
+            "config" : {
+              "nodeName" : "Spark SQL 1",
+              "sql_query_error_msg" : "",
+              "sql_query" : "select nct_id from Split_1",
+              "description" : "",
+              "link_aliases" : [
+                {
+                  "default_name" : "Split 1",
+                  "link_alias" : "Split_1",
+                  "link" : 166210360723226
+                }
+              ],
+              "tags" : []
+            },
+            "nodeId" : 166210359832722,
+            "nodeLabel" : "Spark SQL",
+            "nodeUiConfig" : {
+              "yPos" : 200,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 7,
+                  "port_id" : 166210359832723,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "nct_id",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166210359832724,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : 30
+            },
+            "configTypeName" : "vue template spark sql processor config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "2A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 7,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "JDBC Destination",
+              "initialXPos" : 100,
+              "group_label" : "T",
+              "nodeGroupType" : "destination",
+              "icon" : "jdbc.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 7,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_batchsize" : 1000,
+              "default_query_timeout" : 0,
+              "default_mode" : "overwrite",
+              "default_truncate" : false
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "jdbc_destination",
+            "outputLinks" : [],
+            "is_node_validated" : true,
+            "configTypeId" : 194,
+            "inputLinks" : [
+              166210392167133
+            ],
+            "config" : {
+              "nodeName" : "JDBC Destination 2",
+              "queryTimeout" : 0,
+              "credential_name" : "All Sources Creds",
+              "connection_type" : "ms_sql_server",
+              "description" : "",
+              "connection_type_id" : 38,
+              "schema_name" : "",
+              "credential_type_id" : 1,
+              "jdbc_url" : "jdbc:sqlserver://w3.devsql.modak.com",
+              "batchsize" : 1000,
+              "tags" : [],
+              "mode" : "overwrite",
+              "credential_type" : "Username with password",
+              "driver" : "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+              "truncate" : false,
+              "jdbc_write_options" : [],
+              "full_table_name" : "test.sales.transform_results_execute",
+              "credential_id" : 71
+            },
+            "nodeId" : 166210361613227,
+            "nodeLabel" : "JDBC",
+            "nodeUiConfig" : {
+              "yPos" : 50,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 166210361613228,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 166210361613229,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 270
+            },
+            "configTypeName" : "vue template jdbc destination config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "2A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 7,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "JDBC Destination",
+              "initialXPos" : 100,
+              "group_label" : "T",
+              "nodeGroupType" : "destination",
+              "icon" : "jdbc.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 7,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_batchsize" : 1000,
+              "default_query_timeout" : 0,
+              "default_mode" : "overwrite",
+              "default_truncate" : false
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "jdbc_destination",
+            "outputLinks" : [],
+            "is_node_validated" : true,
+            "configTypeId" : 194,
+            "inputLinks" : [
+              166210392365634
+            ],
+            "config" : {
+              "nodeName" : "JDBC Destination 2_copy",
+              "queryTimeout" : 0,
+              "credential_name" : "All Sources Creds",
+              "connection_type" : "ms_sql_server",
+              "description" : "",
+              "connection_type_id" : 38,
+              "schema_name" : "",
+              "credential_type_id" : 1,
+              "jdbc_url" : "jdbc:sqlserver://w3.devsql.modak.com",
+              "batchsize" : 1000,
+              "tags" : [],
+              "mode" : "overwrite",
+              "credential_type" : "Username with password",
+              "driver" : "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+              "truncate" : false,
+              "jdbc_write_options" : [],
+              "full_table_name" : "test.sales.sparksql_results_execute",
+              "credential_id" : 71
+            },
+            "nodeId" : 166210361945730,
+            "nodeLabel" : "JDBC",
+            "nodeUiConfig" : {
+              "yPos" : 180,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 166210361945731,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 166210361945732,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 280
+            },
+            "configTypeName" : "vue template jdbc destination config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "1A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 1,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "JDBC Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "jdbc.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 1,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {
+              "default_placeholder_value" : "0001-01-01",
+              "default_enable_hash_partition" : false,
+              "default_fetch_size" : 5000,
+              "default_query_timeout" : 0,
+              "default_number_of_hash_partitions" : 8
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "jdbc_source",
+            "outputLinks" : [
+              166306057213205,
+              166306057372706
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 144,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "JDBC Source 1_copy 1",
+              "queryTimeout" : 0,
+              "sql_query_error_msg" : "",
+              "credential_name" : "All Sources Creds",
+              "connection_type" : "postgres",
+              "incremental_load" : [],
+              "description" : "",
+              "enable_hash_partition" : false,
+              "connection_type_id" : 1,
+              "credential_type_id" : 1,
+              "jdbc_url" : "jdbc:postgresql://w3.devpsql.modak.com:5432/source_db",
+              "tags" : [],
+              "credential_type" : "Username with password",
+              "driver" : "org.postgresql.Driver",
+              "jdbc_read_options" : [],
+              "fetchsize" : 5000,
+              "sql_query" : "select * from ctgov.design_groups",
+              "credential_id" : 71,
+              "number_of_hash_partitions" : 8
+            },
+            "nodeId" : 166306055922202,
+            "nodeLabel" : "JDBC",
+            "nodeUiConfig" : {
+              "yPos" : 110,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 166306055922303,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "nct_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "group_type",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "title",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "description",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166306055922304,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -460
+            },
+            "configTypeName" : "jdbc config form template"
+          }
+        ],
+        "last_validation_ts" : "2022-09-13 09:25:35.961",
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 524,
+        "enable_cache" : false,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "spark_config" : {
+              "num_executors" : "5",
+              "executor_memory" : "3G",
+              "driver_memory" : "2G",
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "5",
+              "fetch_size" : "1000",
+              "driver_cores" : "1",
+              "executor_cores" : "2"
+            },
+            "enable_spark_config" : false,
+            "pipeline_retry" : false,
+            "retry_count" : 0,
+            "extra_spark_config" : [
+              {
+                "property" : "cores",
+                "value" : "2"
+              },
+              {
+                "property" : "conf",
+                "value" : "true"
+              }
+            ],
+            "pipeline_flow_timeout" : 24,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "failure_email_check" : false,
+              "on_success" : [],
+              "same_as_success_email_check" : false,
+              "success_email_check" : false
+            }
+          },
+          "pipeline_alerts" : {
+            "duplicate_records" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "3",
+              "alert_label" : "Duplicate Records",
+              "enable_alert" : false,
+              "alert_type" : "duplicate_records"
+            },
+            "rate_of_data_change" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "4",
+              "alert_label" : "Rate of Data Change",
+              "enable_alert" : false,
+              "alert_type" : "rate_of_data_change"
+            },
+            "schema_drift" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "1",
+              "alert_label" : "Schema Drift",
+              "enable_alert" : false,
+              "alert_type" : "schema_drift"
+            },
+            "no_data_change" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "2",
+              "alert_label" : "No Data Change",
+              "enable_alert" : false,
+              "alert_type" : "no_data_change"
+            },
+            "row_count" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "5",
+              "alert_label" : "Row Count",
+              "enable_alert" : false,
+              "alert_type" : "row_count"
+            },
+            "execution_time" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "6",
+              "alert_label" : "Execution Time",
+              "enable_alert" : false,
+              "alert_type" : "execution_time"
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "rpc_workflow_engine",
+          "contact_info" : {
+            "owner" : "CG0806",
+            "email" : "saichandana.gorupally@modak.com"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "Multiple Processors_pipeline",
+          "tags" : [],
+          "compute_engine_name" : "CDE_3_2_test_ce",
+          "workspace_pipeline_type_id" : 1,
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 5,
+          "engine_sub_type" : "CDE-Almaren",
+          "engine_id" : 2,
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 12,
+          "engine_sub_type_id" : 13
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      }
     }
   ]
 }
