@@ -1,0 +1,441 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "pipeline_version" : "v0.902",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : false,
+        "is_active" : true,
+        "nodeKeyProperty" : "nodeId",
+        "refresh_freq" : {
+          "consider_timezone" : true,
+          "cron_freq" : "0 23 16 25 4 ? 2023",
+          "cron_timezone" : "Asia/Calcutta",
+          "cron_type" : "one_time"
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "source_records" : null,
+        "preview_records" : null,
+        "linkDataArray" : [
+          {
+            "endPortId" : 168241945081912,
+            "data" : {
+              "files_list" : [],
+              "preview_data" : {}
+            },
+            "originPortId" : 168241645668704,
+            "toNodeId" : 168241945081811,
+            "linkType" : "schemalink",
+            "fromNodeId" : 168241645668602,
+            "link_id" : 168241945256514
+          }
+        ],
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 33,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "S3 Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "s3.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 33,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {},
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "s3_source_fileops",
+            "outputLinks" : [
+              168241945256514
+            ],
+            "is_node_validated" : false,
+            "configTypeId" : 233,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "S3 Source 1",
+              "credential_name" : "AWS_Keys_MM1204",
+              "detectPartitionedFiles" : false,
+              "connection_type" : "s3",
+              "incremental_load" : false,
+              "description" : "",
+              "connection_type_id" : 10,
+              "filters" : [],
+              "credential_type_id" : 2,
+              "source_url" : "s3://nabuingestion/NIH Livertox source/Sample_Files/sample2.csv",
+              "tags" : [],
+              "credential_type" : "AWS",
+              "incremental_load_params" : {
+                "default_value" : "0001-01-01 00:00:00.000",
+                "max_value" : "false"
+              },
+              "bucket_region" : "us-west-2",
+              "credential_id" : 2039
+            },
+            "nodeId" : 168241645668602,
+            "nodeLabel" : "S3",
+            "nodeUiConfig" : {
+              "yPos" : 200,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 168241645668603,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 168241645668704,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -560
+            },
+            "configTypeName" : "vue template S3 source fileops config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "3A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 50,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 8,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 12,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "File Copy Operation",
+              "initialXPos" : 100,
+              "group_label" : "O",
+              "nodeGroupType" : "file_operation",
+              "icon" : "file_copy.svg",
+              "groupLabel" : "File Operations",
+              "node_properties_id" : 50,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 7
+            },
+            "node_form_default_values" : {},
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "file_copy",
+            "outputLinks" : [],
+            "is_node_validated" : false,
+            "configTypeId" : 250,
+            "inputLinks" : [
+              168241945256514
+            ],
+            "config" : {
+              "nodeName" : "File Copy Operation 1",
+              "destination_connection_type" : "s3",
+              "destination_connection_type_id" : 10,
+              "destination_url" : "s3://nabuingestion/NIH_Livertox_Raw/NIH Livertox_Source/",
+              "description" : "",
+              "filters" : [],
+              "conversion_params" : {
+                "algorithm_type" : "",
+                "credential_type" : "",
+                "credential_name" : "",
+                "credential_type_id" : null,
+                "credential_id" : null
+              },
+              "destination_credential_type" : "AWS",
+              "tags" : [],
+              "bucket_region" : "us-west-2",
+              "conversion_type" : "",
+              "destination_credential_name" : "AWS_Keys_MM1204",
+              "destination_credential_id" : null,
+              "destination_credential_type_id" : 2,
+              "destination_filename" : "newfile"
+            },
+            "nodeId" : 168241945081811,
+            "nodeLabel" : "File Copy",
+            "nodeUiConfig" : {
+              "yPos" : 200,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 8,
+                  "port_id" : 168241945081912,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 12,
+                  "port_id" : 168241945081913,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -360
+            },
+            "configTypeName" : "vue template FILE COPY file operation config Curation UI"
+          }
+        ],
+        "last_validation_ts" : null,
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 8601,
+        "enable_cache" : false,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "spark_config" : {
+              "num_executors" : "5",
+              "executor_memory" : "30G",
+              "driver_memory" : "20G",
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "5",
+              "fetch_size" : "1000",
+              "driver_cores" : "1",
+              "executor_cores" : "5",
+              "master" : "local[*]"
+            },
+            "enable_spark_config" : false,
+            "pipeline_retry" : false,
+            "retry_count" : 0,
+            "extra_spark_config" : [],
+            "pipeline_flow_timeout" : 24,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "failure_email_check" : false,
+              "on_success" : [],
+              "same_as_success_email_check" : false,
+              "success_email_check" : false
+            }
+          },
+          "pipeline_alerts" : {
+            "duplicate_records" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "3",
+              "alert_label" : "Duplicate Records",
+              "enable_alert" : false,
+              "alert_type" : "duplicate_records"
+            },
+            "rate_of_data_change" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "4",
+              "alert_label" : "Rate of Data Change",
+              "enable_alert" : false,
+              "alert_type" : "rate_of_data_change"
+            },
+            "schema_drift" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "1",
+              "alert_label" : "Schema Drift",
+              "enable_alert" : false,
+              "alert_type" : "schema_drift"
+            },
+            "no_data_change" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "2",
+              "alert_label" : "No Data Change",
+              "enable_alert" : false,
+              "alert_type" : "no_data_change"
+            },
+            "row_count" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "5",
+              "alert_label" : "Row Count",
+              "enable_alert" : false,
+              "alert_type" : "row_count"
+            },
+            "execution_time" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "6",
+              "alert_label" : "Execution Time",
+              "enable_alert" : false,
+              "alert_type" : "execution_time"
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "default_engine",
+          "contact_info" : {
+            "owner" : "MM1204",
+            "email" : "undefined"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "FileOps test pipeline",
+          "tags" : [],
+          "compute_engine_name" : "RPC_compute_engine",
+          "workspace_pipeline_type_id" : 3,
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 1,
+          "engine_sub_type" : "Standalone-Almaren",
+          "engine_id" : 2,
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "file_operation",
+          "compute_engine_id" : 489,
+          "engine_sub_type_id" : 34
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      }
+    }
+  ]
+}
