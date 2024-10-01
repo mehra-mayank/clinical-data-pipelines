@@ -1,0 +1,9 @@
+{
+	"name": "NabuDataFactoryTesting",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "36eed5db-964e-4ea2-9923-94f6be90066f",
+		"tenantId": "fdcf6fad-c3f0-4c66-8ca1-1e3aaac65150"
+	}
+}
